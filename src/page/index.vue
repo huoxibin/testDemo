@@ -5,7 +5,7 @@
 -->
 <template>
     <div class="index">
-      主页
+      主页这是测试专用的
       <el-button type="danger" plain @click="$router.push('list')">跳到列表页</el-button>
     </div>
 </template>
