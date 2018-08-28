@@ -31,7 +31,7 @@
         },
         methods: {
           setAge(){
-            this.$store.commit( 'showAge',this.msg ); //在组件1中修改组件2的状态
+            this.$store.commit( 'showAge',this.msg); //在组件1中修改组件2的状态
           }
         },
         mounted() {
