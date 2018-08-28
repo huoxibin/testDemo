@@ -11,6 +11,8 @@ Vue.prototype.$get=get;
 Vue.prototype.$post=post;
 Vue.prototype.$qs=qs;
 
+import md5 from 'js-md5';
+Vue.prototype.$md5=md5;
 //element-ui的
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
