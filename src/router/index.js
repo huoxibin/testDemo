@@ -4,6 +4,9 @@ import home from '@/components/home'
 import list from '@/page/list'
 import index from '@/page/index'
 import detail from '@/page/detail'
+/*import components1 from '@/page/components1'
+import components2 from '@/page/components2'*/
+import components0 from '@/page/components0'
 
 Vue.use(Router);
 
@@ -26,23 +29,20 @@ export default new Router({
         {
           path:'detail',
           component:detail
+        },
+        {
+          path:'components0',
+          component:components0
         }
+        /*{
+          path:'components1',
+          component:components1
+        },
+        {
+          path:'components2',
+          component:components2
+        }*/
       ]
-    },
-   /* {
-      path:'list',
-      component:list,
-      name:'list'
-    },
-    {
-      path:'index',
-      component:index,
-      name:'index'
-    },
-    {
-      path:'detail',
-      component:detail,
-      name:'detail'
-    },*/
+    }
   ]
 })
