@@ -6,6 +6,7 @@
 <template>
     <div class="index">
       这是第二次测试develop分支推向master分支！
+      这是测试在本地新建develop_two分支！
       <el-button type="danger" plain @click="$router.push('list')">跳到列表页</el-button>
       <!--<el-button type="danger" plain @click="$router.push('components1')">跳到组件1</el-button>
       <el-button type="danger" plain @click="$router.push('components2')">跳到组件2</el-button>-->
