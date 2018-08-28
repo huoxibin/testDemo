@@ -1,19 +1,21 @@
 <template>
-  <div id="home">
+  <div class="home">
+    <!--header-->
     <v-header></v-header>
-    <div id="main">
+    <!--body-->
+    <div class="main">
       <el-container>
         <el-aside width="200px">
-          <!--<el-button @click="$router.push('list')" type="primary">列表按钮</el-button>-->
           <el-button @click="$router.push('index')" type="success">主页按钮</el-button>
-          <!--<el-button @click="$router.push('detail')" type="info">详情按钮</el-button>-->
+          <el-button @click="$router.push('login')" type="success">登陆页</el-button>
         </el-aside>
         <el-main>
           <router-view></router-view>
         </el-main>
       </el-container>
     </div>
-    <v-footer></v-footer>
+    <!--footer-->
+    <v-footer style="position: fixed;bottom: 0;left: 0"></v-footer>
   </div>
 </template>
 
@@ -32,39 +34,41 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  #home{
+  .home{
     width: 100%;
     height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     overflow: hidden;
     flex-flow: column wrap;
-    #main {
+    .main {
       width: 100%;
       flex: 1;
+      display: flex;
+      overflow: hidden;
+      .el-container{
+        width: 100%;
+        height: 100%;
+        .el-aside {
+          background-color: #D3DCE6;
+          color: #333;
+          height:100%;
+          display: flex;
+          flex-flow:column wrap;
+          justify-content: start;
+          .el-button{
+            margin: 20px 50px;
+            width: 100px;
+            height: 50px;
+          }
+        }
+        .el-main {
+          background-color: #E9EEF3;
+          color: #333;
+          height:100%;
+          width: 100%;
+          padding: 10px;
+        }
+      }
     }
   }
-
-  .el-container{
-    width: 100%;
-    height: 100%;
-  }
-  .el-aside {
-    background-color: #D3DCE6;
-    color: #333;
-    text-align: center;
-    line-height: 200px;
-    height:100%;
-  }
-
-  .el-main {
-    background-color: #E9EEF3;
-    color: #333;
-    height:100%;
-    width: 100%;
-    padding: 10px;
-  }
-
 </style>

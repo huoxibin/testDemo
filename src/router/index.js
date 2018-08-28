@@ -7,6 +7,7 @@ import detail from '@/page/detail'
 /*import components1 from '@/page/components1'
 import components2 from '@/page/components2'*/
 import components0 from '@/page/components0'
+import login from '@/components/login'
 
 Vue.use(Router);
 
@@ -33,6 +34,10 @@ export default new Router({
         {
           path:'components0',
           component:components0
+        },
+        {
+          path:'login',
+          component:login
         }
         /*{
           path:'components1',

@@ -81,7 +81,6 @@
               pathL: "/doctor/medical/getDoctorInfoList",
               pageNum:1,//当前页码
               pageSize:20,//每页显示得条数
-              accessToken: 'eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJqd3QiLCJpYXQiOjE1MzUzMzI4NTYsInN1YiI6IntcImluZGV4XCI6MCxcInJlZnJlc2hUb2tlblwiOmZhbHNlLFwicm9sZVR5cGVcIjo0LFwic2Vzc2lvbklkXCI6XCI1NkE3OUE5MTIyRkYzQUQyQTlCRDE0MkNFMDA3OEUwOFwiLFwidXNlckFnZW50XCI6XCJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXT1c2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzY3LjAuMzM5Ni45OSBTYWZhcmkvNTM3LjM2XCIsXCJ1c2VySWRcIjoyNn0iLCJleHAiOjE1MzUzNDcyNTZ9.BqF5Rck6LpfxhfiuvLzMkl7gmjZf-6xMTtstLvvyCkk'
             }).then(res => {
               if (res.state === 0) {
                 this.tableData4 = res.data.result;
