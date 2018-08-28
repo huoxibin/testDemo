@@ -12,7 +12,29 @@ import {
 axios.defaults.retry = 1; //重试次数
 axios.defaults.retryDelay = 1000; //重试延时
 axios.defaults.shouldRetry = (error) => true; //重试条件，默认只要是错误都需要重试
-// var loadinginstace
+//http request 拦截器
+axios.interceptors.request.use(
+  config => {
+    // loadinginstace = Loading.service({
+    //   fullscreen: true,
+    //   target: document.querySelector('.loading')
+    // });
+    if (window.localStorage.accessToken) {
+      config.headers.accessToken = window.localStorage.accessToken;
+      config.headers.userId = window.localStorage.userId;
+    }
+    return config;
+  },
+  err => {
+    Message({
+      message: '加载超时',
+      type: 'info',
+      center: true
+    })
+    return Promise.reject(err);
+  });
+
+
 //http response 拦截器
 axios.interceptors.response.use(
   response => {
@@ -42,7 +64,6 @@ axios.interceptors.response.use(
           }
         })
         break;
-
     }
     return response;
   },
