@@ -39,8 +39,9 @@ axios.interceptors.request.use(
 //http response 拦截器
 axios.interceptors.response.use(
   response => {
+    console.log(response)//里面很多内容：请求的各种参数配置；
     let config = response.config;
-    console.log(config);
+    console.log(config);//这是上次请求的各种配置：请求头，方式，地址，参数等等等等，可打印看一下；
     // loadinginstace.close()
     switch (response.data.state) {
       case 401:
@@ -52,7 +53,8 @@ axios.interceptors.response.use(
           if (res.data.state === 0) {
             window.localStorage.accessToken = res.data.data.accessToken
             window.localStorage.refreshToken = res.data.data.refreshToken
-            return axios(config);
+            router.go(0)//刷新页面
+            return axios(config);//再一次重新请求，config是上一次请求的各种配置！
           }
         });
         break;
