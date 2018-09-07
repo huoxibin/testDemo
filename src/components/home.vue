@@ -6,8 +6,9 @@
     <div class="main">
       <el-container>
         <el-aside width="200px">
-          <el-button @click="$router.push('index')" type="success">主页按钮</el-button>
           <el-button @click="$router.push('login')" type="success">登陆页</el-button>
+          <el-button @click="$router.push('index')" type="success">主页按钮</el-button>
+          <el-button @click="$router.push('filter')" type="success">过滤器</el-button>
         </el-aside>
         <el-main>
           <router-view></router-view>
