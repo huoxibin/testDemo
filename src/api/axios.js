@@ -23,6 +23,7 @@ axios.interceptors.request.use(
     if (window.localStorage.accessToken) {
       config.headers.accessToken = window.localStorage.accessToken;
       config.headers.userId = window.localStorage.userId;
+      config.headers.version = 'v1.2.0';
     }
     return config;
   },
@@ -54,9 +55,18 @@ axios.interceptors.response.use(
             window.localStorage.accessToken = res.data.data.accessToken
             window.localStorage.refreshToken = res.data.data.refreshToken
             router.go(0)//刷新页面
-            return axios(config);//再一次重新请求，config是上一次请求的各种配置！
+            return axios(config);//再一次重新请求，config是上一次请求的各种配置！俗称（请求挂起）
           }
-        });
+        }).catch(err => {
+            window.localStorage.clear();
+            window.sessionStorage.clear();
+            router.replace({
+              path: '/login',
+              query: {
+                redirect: router.currentRoute.fullPath
+              }
+            })
+      });
         break;
       case 4013:  //用户被禁用
         window.localStorage.clear();
