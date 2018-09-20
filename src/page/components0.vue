@@ -5,8 +5,8 @@
 -->
 <template>
     <div class="">
-      <components1>1</components1>
-      <components2>2</components2>
+      <components1>1---------------9</components1>
+      <components2>2--------------8</components2>
     </div>
 </template>
 
