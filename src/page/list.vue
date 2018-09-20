@@ -80,7 +80,7 @@
             this.$get("/data/my", {
               pathL: "/doctor/medical/getDoctorInfoList",
               pageNum:1,//当前页码
-              pageSize:20,//每页显示得条数
+              pageSize:20,//每页显示得条数1
             }).then(res => {
               if (res.state === 0) {
                 this.tableData4 = res.data.result;
