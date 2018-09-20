@@ -10,7 +10,7 @@
         {{myAge}}
       </p>
       <p>
-        <el-button type="danger" plain @click="$router.go(-1)">返回</el-button>
+        <el-button type="danger" plain @click="$router.go(-1)">返回1</el-button>
       </p>
     </div>
 </template>

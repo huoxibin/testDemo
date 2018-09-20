@@ -7,7 +7,7 @@
     <div class="detail">
       详情页:测试develop分支上的东西
       {{name}}
-      <el-button type="primary" round @click="$router.go(-1)">返回</el-button>
+      <el-button type="primary" round @click="$router.go(-1)">返回1</el-button>
     </div>
 </template>
 
