@@ -14,7 +14,7 @@
           <el-button type="danger" plain @click="$router.push('components2')">跳到组件2</el-button>
         </div>-->
         <div>
-          <el-button type="danger" plain @click="$router.go(-1)">返回1</el-button>
+          <el-button type="danger" plain @click="$router.go(-1)">返回</el-button>
         </div>
     </div>
 </template>

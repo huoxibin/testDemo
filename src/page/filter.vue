@@ -10,7 +10,7 @@
       <h1>{{price | myCurrency('￥')}}</h1>
       <h1>{{name | myTextTransform(false)}}</h1>
       <!-- 将时间戳转化为时间 -->
-      <h1>根据时间戳转化为时间1：{{ str | formateTime}}</h1>
+      <h1>根据时间戳转化为时间：{{ str | formateTime}}</h1>
     </div>
 </template>
 
